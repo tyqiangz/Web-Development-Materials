@@ -21,7 +21,7 @@ class App extends Component {
     } )
   }
 
-  /* nameChangedHandler = () => {
+  nameChangedHandler = () => {
     this.setState( {
       persons: [
         { name: 'Max', age: 28 },
@@ -30,7 +30,7 @@ class App extends Component {
       ]
     } )
   }
-  */
+  
 
   render() {
     return (
@@ -50,7 +50,9 @@ class App extends Component {
         <hr></hr>
         <div>
           <p>Some testing output :)</p>
-          <UserOutput name={this.state.users[0].name}>Output 1</UserOutput>
+          <UserOutput 
+            name={this.state.users[0].name}
+            changed={this.nameChangedHandler}>Output 1</UserOutput>
           <UserOutput name={this.state.users[1].name}>Output 2</UserOutput>
           <UserOutput name={this.state.users[2].name}>Output 3</UserOutput>
           <button onClick={() => this.switchNameHandler()}>Update names</button>
