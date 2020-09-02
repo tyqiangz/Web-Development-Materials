@@ -1,2 +1,2 @@
-# My-Webpage
-This project serves to aid my learning in web development and document important information that I cannot keep track.
+# Web-Development-Materials
+A repo to dump materials about Web development I've came across.
