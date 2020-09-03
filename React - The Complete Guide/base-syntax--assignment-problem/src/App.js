@@ -1,36 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
 import UserOutput from './UserOutput/UserOutput'
+import UserInput from './UserInput/UserInput';
 
 class App extends Component {
-  state = {
-    users: [
-      {name: "Alpha"},
-      {name: "Beta"},
-      {name: "Caroline"}
-    ]
-  }
+  state = {username: "Kim"}
 
-  switchNameHandler = () => {
-    this.setState( {
-      users: [
-        { name: 'TYQ', age: 28 },
-        { name: 'Manu', age: 29 },
-        { name: 'Stephanie', age: 27 }
-      ]
-    } )
+  usernameChangedHandler = (event) => {
+    this.setState({username: event.target.value});
   }
-
-  nameChangedHandler = () => {
-    this.setState( {
-      persons: [
-        { name: 'Max', age: 28 },
-        { name: 'TYQ', age: 25 },
-        { name: 'Stephanie', age: 26 }
-      ]
-    } )
-  }
-  
 
   render() {
     return (
@@ -48,15 +26,12 @@ class App extends Component {
           <li>Add styling of your choice to your components/ elements in the components - both with inline styles and stylesheets</li>
         </ol>
         <hr></hr>
-        <div>
-          <p>Some testing output :)</p>
-          <UserOutput 
-            name={this.state.users[0].name}
-            changed={this.nameChangedHandler}>Output 1</UserOutput>
-          <UserOutput name={this.state.users[1].name}>Output 2</UserOutput>
-          <UserOutput name={this.state.users[2].name}>Output 3</UserOutput>
-          <button onClick={() => this.switchNameHandler()}>Update names</button>
-        </div>
+        <UserInput 
+          changed={this.usernameChangedHandler}
+          currentName={this.state.username}/>
+        <UserOutput userName="Alpha"/>
+        <UserOutput userName={this.state.username}/>
+        <UserOutput userName="Carol"/>
       </div>
     );
   }
