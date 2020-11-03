@@ -3,7 +3,7 @@ let temp = 123;
 let leftOprand = 0;
 let operator = "";
 
-output.innerText = temp;
+output.innerText = leftOprand;
 
 buttonRows = document.querySelectorAll('.button-row')
 
@@ -14,14 +14,40 @@ for (i = 0; i<6; i++) {
         switch (event.target.innerText) {
             case "C":
                 output.innerText = 0;
+                leftOprand = 0;
+                operator = "";
                 break;
             case "÷":
             case "×":
             case "-":
             case "+":
-                leftOprand = output.innerText;
+                if (operator !== "") {
+                    if (operator === "÷") {
+                        operator = event.target.innerText;
+                        output.innerText = leftOprand / output.innerText;
+                        leftOprand = output.innerText;
+                    }
+                    else if (operator === "×") {
+                        operator = event.target.innerText;
+                        output.innerText = leftOprand * output.innerText;
+                        leftOprand = output.innerText;
+                    }
+                    else if (operator === "-") {
+                        operator = event.target.innerText;
+                        output.innerText = leftOprand - output.innerText;
+                        leftOprand = output.innerText;
+                    }
+                    else if (operator === "+") {
+                        operator = event.target.innerText;
+                        output.innerText = leftOprand + output.innerText;
+                        leftOprand = output.innerText;
+                    }
+                }
+                else {
+                    operator = event.target.innerText;
+                    leftOprand = output.innerText;
+                }
                 output.innerText = 0;
-                operator = event.target.innerText;
                 break;
             case "←":
                 output.innerText = Math.floor(output.innerText / 10);
@@ -38,19 +64,17 @@ for (i = 0; i<6; i++) {
             case "0":
                 console.log(event.target.innerText);
                 output.innerText = output.innerText * 10 + parseInt(event.target.innerText);
-                if (operator !== "") {
-                    leftOprand = output.innerText;
-                }
                 break;
             case "=":
-                console.log(leftOprand);    
+                console.log(leftOprand);
+                console.log(output.innerText)
                 if (operator === "+") {
-                    output.innerText = leftOprand + output.innerText;
+                    output.innerText = parseInt(leftOprand) + parseInt(output.innerText);
                 }
                 else if (operator === "-") {
                     output.innerText = leftOprand - output.innerText;
                 }
-                else if (operator === "*") {
+                else if (operator === "×") {
                     output.innerText = leftOprand * output.innerText;
                 }
                 else if (operator === "÷") {
