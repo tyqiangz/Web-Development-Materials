@@ -1,0 +1,15 @@
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.row [class*="col-"] {
+    margin-right: 10%;
+}
+
+[class*="col-"] article{
+    border: solid black 1px;
+    margin-bottom: 10%;
+    background-color: rgb(250, 250, 250);
+}

@@ -1,0 +1,26 @@
+.content {
+    margin: 0 5%;
+}
+
+.navbar {
+    display: flex;
+    /*border: solid black 1px;*/
+    margin: -10px -10px 20px -10px;
+    padding: 1% 10%;
+    
+
+    /* making box-shadow only at the bottom: https://stackoverflow.com/questions/4561097/css-box-shadow-bottom-only */
+    box-shadow: 0 10px 7px -7px rgba(33,33,33,.2);
+    /*box-shadow: #000 0px 0px 8px;*/
+}
+
+.navbar a {
+    margin-right: 1%;
+    text-decoration: none;
+    color: #333;
+    align-items: center;
+}
+
+.navbar .nav-home {
+    color: #ff7601;
+}
