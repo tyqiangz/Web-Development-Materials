@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tyqiangz - Deep Learning</title>
+    <link href="style/style.css" rel="stylesheet">
+    <link href="style/deep-learning.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-home">Home</a>
+        <a href="about-me.html">About Me</a>
+        <div class="dropdown">
+            <a href="#">Data Science</a>
+            <div class="dropdown-content">
+                <a href="#">Deep Learning</a>
+                <a href="#">Reinforcement Learning</a>
+                <a href="#">Linear Models</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">Math</a>
+            <div class="dropdown-content">
+                <a href="#">Optimisation</a>
+                <a href="#">Multivariable Calculus</a>
+                <a href="#">Matrix Computation</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="statistics.html">Statistics</a>
+            <div class="dropdown-content">
+                <a href="#">Bayesian Statistics</a>
+                <a href="#">Design and Analysis of Experiments</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">Finance</a>
+            <div class="dropdown-content">
+                <a href="/#">Intro</a>
+            </div>
+        </div>
+    </nav>
+    <canvas id=c></canvas>
+    <!--
+    ALGORITHM:
+
+    structure:
+    - gen( x,y,z ):
+        - create node at x,y,z // blue
+        - append some children to list:
+            - within a certain distance to parent
+            - outside a certain distance from any node
+            - within a global distance
+        - if no children
+            - don't append any
+            - set as end node // green-ish
+
+    - gen( 0,0,0 ) // red
+    - while list has items
+        - gen( position of first item )
+        - remove first item
+
+
+    impulse behaviour:
+    - pick( node ):
+        - if node is end node
+            - pick( original node )
+        - else
+            - pick( random node from node children )
+
+    - pick( original node)
+
+    -->
+    <script src="deep-learning.js"></script>
+</body>
+</html>

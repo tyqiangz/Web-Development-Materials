@@ -1,15 +1,100 @@
+/* adjusting size of images*/
+.profile-pic{
+    width: 40%;
+    height: 40%;
+    border-radius: 10px;
+}
+
+.nus-logo {
+    width: 15%;
+    height: 15%;
+}
+
+.dtu-logo {
+    width: 10%;
+    height: 10%;
+}
+
+.csit-logo {
+    width: 15%;
+    height: 15%;
+}
+
+/* generic styling */
+.content-about {
+    /* nav bar is 40px in height*/
+    margin: 100px 5% 0 5%;
+}
+
 .row {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: center;
 }
 
-.row [class*="col-"] {
-    margin-right: 10%;
+.col-1 {
+    margin-right: 5%;
+    width: 30%;
 }
 
-[class*="col-"] article{
-    border: solid black 1px;
-    margin-bottom: 10%;
-    background-color: rgb(250, 250, 250);
+article {
+    padding: 0.5px 20px;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    background-color: rgb(245, 245, 245);
+}
+
+.article-title {
+    font-size: 30pt;
+    margin: 20px 0;
+}
+
+article ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* styling for bio container */
+
+.profile-pic-container {
+    display: flex;
+    justify-content: center;
+}
+
+.bio-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.bio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bio li {
+    margin-bottom: 10px;
+}
+
+.social-link {
+    text-decoration: none;
+    color: black;
+    margin-right: 10px;
+}
+
+/* styling for skills container */
+.last-skill-star {
+    margin-right: 100px;
+}
+
+/* styling for education container */
+
+.school {
+    display: flex;
+    flex-direction: row;
+    margin: 0 5%;
+}
+
+.school-info {
+    margin: 0 5%;
 }

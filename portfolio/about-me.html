@@ -6,37 +6,161 @@
     <title>tyqiangz - About Me</title>
     <link href="style/style.css" rel="stylesheet">
     <link href="style/about-me.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+    <link rel="stylesheet" href="../fontawesome-free-5.15.1-web/css/all.css">
 </head>
 <body>
     <nav class="navbar">
         <a href="index.html" class="nav-home">Home</a>
-        <a href="/">About Me</a>
+        <a href="about-me.html">About Me</a>
+        <div class="dropdown">
+            <a href="#">Data Science</a>
+            <div class="dropdown-content">
+                <a href="#">Deep Learning</a>
+                <a href="#">Reinforcement Learning</a>
+                <a href="#">Linear Models</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">Math</a>
+            <div class="dropdown-content">
+                <a href="#">Optimisation</a>
+                <a href="#">Multivariable Calculus</a>
+                <a href="#">Matrix Computation</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">Statistics</a>
+            <div class="dropdown-content">
+                <a href="#">Bayesian Statistics</a>
+                <a href="#">Design and Analysis of Experiments</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">Finance</a>
+            <div class="dropdown-content">
+                <a href="/#">Intro</a>
+            </div>
+        </div>
     </nav>
-    <div class="content">
+    <div class="content-about">
         <div class="row">
             <div class="col-1">
-                <article>
-                    <img src="" alt="My profile picture">
-                    <p>tyqiangz</p>
-                    <p>Welcome to my homepage!</p>
-                    <p>Singapore</p>
-                    <p>tay.yongqiang@gmail.com</p>
-                    <p>https://tyqiangz.github.io</p>
+                <article class="bio-container">
+                    <div class="profile-pic-container">
+                        <img class="profile-pic" src="images/profile-pic.png" alt="My profile picture">
+                    </div>
+                    <ul class="bio">
+                        <li class="article-title">tyqiangz</li>
+                        <li class="center">Welcome to my homepage!</li>
+                        <p class="profile-links">
+                            <a class="social-link" href="http://github.com/tyqiangz">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a class="social-link" href="https://www.linkedin.com/in/yong-qiang-tay/">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a class="social-link" href="https://www.facebook.com/tay.yongqiang.1">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </p>
+                        <li>
+                            <i class="fa fa-map-marker-alt"></i>
+                            Singapore
+                        </li>
+                        <li>
+                            <i class="fas fa-file"></i>
+                            <a class="social-link" href="https://www.overleaf.com/read/fpwyxyhyddsc">My resume</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i> 
+                            tay.yongqiang@gmail.com
+                        </li>
+                        <li>
+                            <i class="fas fa-link"></i>
+                            https://tyqiangz.github.io
+                        </li>
+                    </ul>
                 </article>
                 <article>
-                    Skills
-                    <p>HTML , CSS , Javascript , PHP, Python, C</p>
-
-                    <p>Adobe XD, Inkscape, Git, Linux</p>
+                    <p class="article-title">Skills</p>
+                    <ul class="skills">
+                        <li class="skill">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star" class="last-skill-star"></i>
+                            <text>Python</text>
+                        </li>
+                        <li class="skill">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star" class="last-skill-star"></i>
+                            LaTeX
+                        </li>
+                        <li class="skill">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star" class="last-skill-star"></i>
+                            HTML, CSS, Javascript
+                        </li>
+                        <li class="skill">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star" class="last-skill-star"></i>
+                            Git
+                        </li>
+                        <li class="skill">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star" class="last-skill-star"></i>
+                            R
+                        </li>
+                        <li class="skill">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star" class="last-skill-star"></i>
+                            MATLAB
+                        </li>
+                        <li class="skill">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star" class="last-skill-star"></i>
+                            Hadoop
+                        </li>
+                        <li class="skill">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star" class="last-skill-star"></i>
+                            Spark
+                        </li>
+                    </ul>
                 </article>
             </div>
             <div class="col-2">
                 <article>
-                    About
-                    <p>Hi, my name is Yong Qiang. I built this site purely using HTML, CSS.</p>
+                    <p class="article-title">About</p>
+                    <p>Hi, my name is Yong Qiang. I've built this site purely using HTML, CSS.</p>
+                    <p>My interests include web development, data science and classical music.</p>
                 </article>
                 <article>
-                    Projects
+                    <p class="article-title">Projects</p>
                     <ul>
                         <li>Project 1</li>
                         <li>Project 2</li>
@@ -44,24 +168,42 @@
                     </ul>
                 </article>
                 <article>
-                    Work Experience
+                    <p class="article-title">Work Experience</p>
+                    <div class="school">
+                        <img class="csit-logo" src="images/csit-logo.png" alt="Logo of Centre for Strategic Infocomm Technologies"/>
+                        <div class="school-info">
+                            <h3>Centre for Strategic Infocomm Technologies</h3>
+                            <p>Data Analyst</p>
+                        </div>
+                    </div>
                     <ul>
-                        <li>Job 1</li>
                         <li>Job 2</li>
                     </ul>
                 </article>
                 <article>
-                    Education
-                    <ul>
-                        <li>
-                            University
-                            <p>Major in _</p>
-                        </li>
-                        <li>
-                            JC
-                            <p>Studied __</p>
-                        </li>
-                    </ul>
+                    <h1 class="article-title">Education</h1>
+                    <div class="school">
+                        <img class="nus-logo" src="images/nus-logo.jpg" alt="Logo of National University of Singapore"/>
+                        <div class="school-info">
+                            <h3>National University of Singapore</h3>
+                            <p>Majors: Applied Math and Statistics</p>
+                        </div>
+                    </div>
+                    <div class="school">
+                        <img class="dtu-logo" src="images/dtu-logo.png" alt="Logo of Technical University of Denmark"/>
+                        <div class="school-info">
+                            <h3 >Technical University of Denmark</h3>
+                            <p>Student Exchange Program</p>
+                            <p>Modules taken: Machine Learning, Quantum Physics, Image Data Processing, Differential Equations, Data Security</p>
+                        </div>
+                    </div>
+                    <div class="school">
+                        <img class="dtu-logo" src="images/dtu-logo.png" alt="Logo of Technical University of Denmark"/>
+                        <div class="school-info">
+                        <h3 >Nanyang Junior College</h3>
+                        <p>Subjects: Physics, Math, Chemistry, Geography, General Paper</p>
+                        </div>
+                    </div>
                 </article>
             </div>
         </div>

@@ -1,0 +1,84 @@
+/* make text blink */
+
+.typewriter {
+    font-family: 'Waiting for the Sunrise', cursive;
+    display: flex;
+    font-size: 35px; 
+    
+    /* navigation bar is 40px in height */
+    padding: 140px 50px 100px 50px; 
+    letter-spacing: 6px;
+    font-weight: bold;
+
+    justify-content: center;
+    align-items: center;
+
+    /* border: solid black 1px; */
+    background-color:  rgb(245, 245, 245);
+}
+
+.typewriter-text {
+    display: inline-block;
+  	overflow: hidden;
+  	letter-spacing: inherit;
+ 	animation: typing 5s steps(30, end), blink .75s step-end infinite;
+    white-space: nowrap;
+    font-size: inherit;
+    font-weight: 700;
+    border-right: 2px solid black;
+    box-sizing: border-box;
+    /* border: solid black 1px; */
+}
+
+@keyframes typing {
+    from { 
+        width: 0% 
+    }
+    to { 
+        width: 60% 
+    }
+}
+
+@keyframes blink {
+    from, to { 
+        border-color: transparent 
+    }
+    50% { 
+        border-color: black; 
+    }
+}
+
+/* styling topics containers */
+
+.topics {
+    /* border: solid black 1px; */
+    margin: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5%;
+    /* border: solid black 1px; */
+}
+
+.row:last-child{
+    margin-bottom: 0;
+}
+
+.topic {
+    /* border: solid black 1px; */
+    width: 35%;
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.topic:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
