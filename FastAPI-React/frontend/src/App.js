@@ -1,0 +1,24 @@
+import React, { Component } from 'react';
+// import Button from '@material-ui/core/Button';
+import NavBar from './components/NavBar'
+
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <NavBar />
+      </div>
+    )
+  }
+}
+
+
+// function App() {
+//   return (
+//     <Button variant="contained" color="primary">
+//       Hello World
+//     </Button>
+//   );
+// }
+
+export default App;
