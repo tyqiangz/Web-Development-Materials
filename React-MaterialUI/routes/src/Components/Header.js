@@ -1,16 +1,13 @@
 import React from 'react'
 import { AppBar, IconButton, Toolbar, Typography } from '@material-ui/core'
-import MenuIcon from '@material-ui/icons/Menu';
+import DeHaze from '@material-ui/icons/Menu';
 
 function Header (props) {
     return (
         <AppBar position="absolute">
             <Toolbar>
-            <IconButton
-                edge="start"
-                color="inherit"
-            >
-                <MenuIcon />
+            <IconButton edge="start" color="inherit">
+                <DeHaze />
             </IconButton>
             <Typography variant="h6" color="inherit">
                 {props.title}
