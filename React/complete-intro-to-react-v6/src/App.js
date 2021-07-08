@@ -1,31 +1,36 @@
+import { useState, StrictMode } from "react";
 import { render } from "react-dom";
-// import Pet from "./Pet";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import Details from "./Details";
 import SearchParams from "./SearchParams";
+import ThemeContext from "./ThemeContext";
 
 const App = () => {
-  // // create pet details
-  // const pet_details = [
-  //   { name: "Luna", animal: "Dog", breed: "Havanese" },
-  //   { name: "Pepper", animal: "Bird", breed: "Cockatiel" },
-  //   { name: "Sudo", animal: "Dog", breed: "Wheaten Terrier" },
-  // ];
-
-  // // initialise array to store pet components
-  // const pet_components = pet_details.map((pet_detail) => (
-  //   <Pet
-  //     key="blah"
-  //     name={pet_detail.name}
-  //     animal={pet_detail.animal}
-  //     breed={pet_detail.breed}
-  //   ></Pet>
-  // ));
-
+  const theme = useState("darkblue");
   return (
-    <div>
-      <h1>Adopt Me!</h1>
-      <SearchParams />
-    </div>
+    <ThemeContext.Provider value={theme}>
+      <div>
+        <Router>
+          <header>
+            <Link to="/">Adopt Me!</Link>
+          </header>
+          <Switch>
+            <Route path="/details/:id">
+              <Details />
+            </Route>
+            <Route path="/">
+              <SearchParams />
+            </Route>
+          </Switch>
+        </Router>
+      </div>
+    </ThemeContext.Provider>
   );
 };
 
-render(<App />, document.getElementById("root"));
+render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+  document.getElementById("root")
+);
