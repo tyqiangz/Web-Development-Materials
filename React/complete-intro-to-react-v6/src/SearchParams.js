@@ -13,6 +13,9 @@ const SearchParams = () => {
   const [breeds] = useBreedList(animal);
   const [theme, setTheme] = useContext(ThemeContext);
 
+  // an action done after this component is rendered
+  // [] at the end refers to data dependencies, if no dependencies are given,
+  // any hook changes will trigger the effect to be run again
   useEffect(() => {
     requestPets();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
@@ -48,7 +51,9 @@ const SearchParams = () => {
           <select
             id="animal"
             value={animal}
+            // Execute a JavaScript when a user enters an input field:
             onChange={(e) => updateAnimal(e.target.value)}
+            // Execute a JavaScript when a user leaves an input field
             onBlur={(e) => updateAnimal(e.target.value)}
           >
             <option />
