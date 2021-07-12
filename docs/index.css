@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+* {
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* colours */
+.main-background {
+    background-color: hsl(233, 47%, 7%);
+}
+.card-background {
+    background-color: hsl(244, 38%, 16%);
+}
+.accented-font {
+    color: hsl(277, 64%, 61%);
+}
+.white-font-color {
+    color: white;
+}
+.main-para-font-color {
+    color: hsla(0, 0%, 100%, 0.75);
+}
+.stats-para-font-color {
+    color: hsla(0, 0%, 100%, 0.6);
+}
+.white-border {
+    border: 1px solid red;
+}
+
+/* main css */
+body {
+    display: flex;
+    justify-content: center;
+}
+main {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+}
+.card {
+    margin: 8vh 22vw;
+    height: 84vh;
+    width: 56vw;
+    border-radius: 3%;
+}
+.image {
+    width: 100%;
+    height: 30%;
+    border-radius: 3% 3% 0 0;
+    background-color: hsla(277, 94%, 41%, 0.4);
+}
+.writing {
+    width: 100%;
+    height: 70%;
+    padding: 30px 23px;
+    border-radius: 3% 0 0 3%;
+}
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 3% 3% 0 0;
+    z-index: -1;
+    opacity: 0.55;
+}
+header {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+    height: 25%;
+}
+.description {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 7pt;
+    height: 30%;
+    line-height: 170%;
+}
+.stats {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    height: 45%;
+}
+.stats > div {
+    height: 33.3%;
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+}
+.stats > div div:nth-of-type(1) {
+    margin-bottom: 4px;
+}
+.stats > div div:nth-of-type(2) {
+    font-size: 6pt;
+    letter-spacing: 0.1em;
+}
+
+/* desktop styling >=1440px */
+@media screen and (min-width: 1440px) {
+    * {
+        text-align: left;
+    }
+    .card {
+        display: flex;
+        flex-flow: row;
+        margin: 23vh 11vw;
+        height: 58vh;
+        width: 78vw;
+        border-radius: 3%;
+    }
+    .image {
+        width: 49%;
+        height: 100%;
+    }
+    img{
+        border-radius: 0 10px 10px 0;
+    }
+    .writing {
+        order: -1;
+        height: 100%;
+        width: 51%;
+        padding: 72px 70px 45px 75px;
+    }
+    header{
+        font-size: 27pt;
+        height: 35%;
+    }
+    .description{
+        height: 45%;
+        font-size: 11pt;
+        padding-right: 45px;
+    }
+    .stats {
+        display: flex;
+        height: 20%;
+    }
+    .stats > div {
+        height: 100%;
+        width: 33.3%;
+    }
+    .stats > div div:nth-of-type(1) {
+        height: 50%;
+        font-size: 16pt;
+    }
+    .stats > div div:nth-of-type(2) {
+        height: 50%;
+        font-size: 8pt;
+        letter-spacing: 0.2em;
+    }
+}
